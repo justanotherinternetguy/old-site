@@ -1,0 +1,501 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap");
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/******************************************/
+
+:root {
+  --font-body: "Inconsolata", monospace;
+  --font-head: "Didact Gothic", sans-serif;
+  --font-main: "Plus Jakarta Sans", sans-serif;
+  --c0: rgb(190, 216, 248);
+  --c1: rgb(125, 165, 213);
+  --c2: rgb(48, 120, 191);
+  --c3: rgb(24, 96, 165);
+  --c4: rgb(21, 87, 152);
+  --c8: rgb(2, 33, 63);
+  --c9: rgb(2, 26, 50);
+  --c10: rgb(0, 16, 31);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background: var(--c10);
+}
+
+/* HEADER */
+
+header {
+  min-height: 100vh;
+}
+
+header h1 {
+  font-size: 4em;
+  text-align: center;
+  font-family: var(--font-head);
+  color: var(--c2);
+}
+
+header #intro,
+header #projects,
+header #blog,
+header #list,
+header #archive,
+header #cdown {
+  color: var(--c1);
+  font-size: 2.5em;
+  font-family: var(--font-body);
+  text-align: center;
+  font-weight: 600;
+}
+
+nav {
+  background: var(--c8);
+  font-family: var(--font-head);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+}
+
+nav ul a {
+  padding: 0.355rem 1rem;
+  font-size: 22px;
+  text-decoration: none;
+  color: var(--c0);
+  transition: 0.5s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: var(--c2);
+}
+
+main {
+  margin: 0%;
+}
+
+main h1 {
+  font-family: var(--font-head);
+  text-align: center;
+  font-size: 3em;
+}
+
+main p {
+  font-size: 20px;
+}
+
+main li {
+  font-size: 20px;
+}
+
+.about {
+  font-family: var(--font-main);
+  background-color: var(--c1);
+  padding: 30px;
+  margin-right: 10%;
+}
+
+.skills {
+  background-color: var(--c0);
+  font-family: var(--font-main);
+  margin-left: 10%;
+  padding: 30px;
+}
+
+.experience {
+  background-color: var(--c1);
+  font-family: var(--font-main);
+  margin-right: 10%;
+  padding: 30px;
+}
+
+.learning {
+  background-color: var(--c0);
+  font-family: var(--font-main);
+  margin-left: 10%;
+  padding: 30px;
+}
+
+.future {
+  background-color: var(--c1);
+  font-family: var(--font-main);
+  margin-right: 10%;
+  padding: 30px;
+}
+
+.contact {
+  font-family: var(--font-main);
+  padding: 30px;
+  color: var(--c0);
+}
+
+a.link-github {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  border-radius: 50px;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: var(--c10);
+  padding: 0.5em 2em;
+  background-color: var(--c3);
+  border: 3px solid var(--c3);
+  -webkit-transition: 200ms ease-in-out all;
+  transition: 200ms ease-in-out all;
+  font-size: 20px;
+  margin-left: 33%;
+  margin-right: 33%;
+  font-weight: 600;
+  font-family: var(--font-head);
+  margin-top: 1%;
+}
+
+a.link-github:hover {
+  background-color: transparent;
+  color: var(--c1);
+}
+
+a.link-github::after {
+  display: none;
+}
+
+a.link-github svg {
+  width: 1em;
+  fill: #000000;
+  margin-right: 0.5em;
+  -webkit-transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1) all;
+  transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1) all;
+}
+
+a.link-github:hover svg {
+  fill: var(--c1);
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.arrows {
+  width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 20px;
+}
+
+.arrows path {
+  stroke: var(--c1);
+  fill: transparent;
+  stroke-width: 3px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.arrows path.a1 {
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+}
+
+.arrows path.a2 {
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s;
+}
+
+.arrows path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+}
+
+.center {
+  font-family: var(--font-main);
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap row;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.card-row {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  min-width: 70%;
+  gap: 50px;
+}
+
+.card {
+  background-color: var(--c9);
+  border-radius: 50px;
+  min-width: 400px;
+  font-weight: bold;
+  max-width: 500px;
+  padding: 20px;
+  text-align: center;
+  border: 4px transparent solid;
+  transition: all ease 0.3s;
+  box-shadow: 1px 1px 5px 0 rgb(0 0 0 / 50%);
+}
+
+.card:hover {
+  border: 4px var(--c0) solid;
+  box-shadow: 1px 1px 30px 0 rgb(0 0 0 / 50%);
+  transform: translateY(-5%);
+}
+
+a.blue {
+  text-decoration: none;
+  color: var(--c0);
+}
+
+a.white {
+  text-decoration: none;
+  color: white;
+}
+
+.card ul {
+  font-size: 20px;
+}
+
+.link {
+  color: var(--c8);
+  transition: 0.5s;
+}
+
+.link:hover {
+  padding: 0em 0.25em;
+  background-color: var(--c2);
+  color: var(--c0);
+}
+
+main.works {
+  margin: 3%;
+  min-height: 100vh;
+}
+
+.full {
+  margin: 0%;
+}
+
+.note {
+  font-family: var(--font-body);
+  color: red;
+  margin: 0 3% 1%;
+}
+
+.langs {
+  background-color: var(--c0);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.langs img {
+  width: 100px;
+  display: inline-block;
+  padding: 0.5%;
+}
+
+.about img {
+  padding: 0.5%;
+  width: 100px;
+}
+
+
+.hide-text {
+  display: none;
+}
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 4em;
+  height: 1.5em;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 20px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: var(--c3);
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px var(--c3);
+}
+
+input:checked+.slider:before {
+  transform: translateX(2.5em);
+}
