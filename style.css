@@ -446,7 +446,6 @@ main.works {
   width: 100px;
 }
 
-
 .hide-text {
   display: none;
 }
@@ -473,7 +472,7 @@ main.works {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 30px;
 }
 
@@ -484,17 +483,17 @@ main.works {
   width: 1.5em;
   border-radius: 20px;
   background-color: white;
-  transition: .4s;
+  transition: 0.4s;
 }
 
-input:checked+.slider {
+input:checked + .slider {
   background-color: var(--c3);
 }
 
-input:focus+.slider {
+input:focus + .slider {
   box-shadow: 0 0 1px var(--c3);
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   transform: translateX(2.5em);
 }
